@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+p {
+    font-family: verdana;
+    font-size: 10px;
+    margin: 5px 10% 0px 10%;
+    text-align:center;
+}
+
+div{
+	border:3px solid;
+   	border-color:white;
+    border-radius:25px;
+    margin: 5px;
+    float :left;
+    padding : 20px 16px ;
+	width:20%;
+    height:450px;
+   
+}
+
+img{
+	border:2px;
+    border-radius:25px;
+    height:400px;
+}
+
+
+</style>
+</head>
+<body>
+
+<h1>Gellery?</h1>
+
+<div>
+    <img src="http://www.abcgallery.com/p/picasso/picasso195.jpg" width=100%>
+    <p>1915. Oil on canvas. The Museum of Modern Arts, New York, NY, USA.</p>
+</div>
+<div>
+    <img src="http://www.abcgallery.com/p/picasso/picasso6.jpg" width=100%>
+    <p>I don't know who he is.but I know one thing. He must feel bored</p>
+</div>
+<div>
+    <img src="http://www.abcgallery.com/p/picasso/picasso268.jpg" width=100%>
+    <p>Grotesque face.</p>
+</div>
+<div>
+    <img src="https://cafeptthumb-phinf.pstatic.net/20120906_30/flowwall_1346912167753aaJdv_JPEG/%BA%CF%B1%D8%BD%BA%C5%B8%C0%CF2.jpg?type=w740" width=100%>
+    <p>Just a bear.</p>
+</div>
+
+</body>
+</html>
