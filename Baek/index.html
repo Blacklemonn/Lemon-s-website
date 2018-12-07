@@ -1,53 +1,60 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 
-  <head>
-
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>One Page Wonder - Start Bootstrap Template</title>
-
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
     <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <!--2type of css style can change 2file.-->
+    <link href="css/one-page-wonder.day.css" id="dayCSS" rel="stylesheet">
+    <link href="css/one-page-wonder.night.css" id="nightCSS" rel="stylesheet alternate">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
 
-    <link href="css/one-page-wonder.css" rel="stylesheet">
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
 
-  </head>
-
-  <body>
-  	<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-  		<div class="container">
-  			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-  				<span class="navbar-toggler-icon"></span>
-  			</button>
-  			<div class="collapse navbar-collapse" id="navbarResponsive">
-  				<ul class="navbar-nav ml-auto">
-  					<li class="nav-item">
-  						<a class="nav-link js-scroll-trigger" href="#Me">About me</a>
-  					</li>
-  					<li class="nav-item">
-  						<a class="nav-link js-scroll-trigger" href="#Games">My games</a>
-  					</li>
-  					<li class="nav-item">
-  						<a class="nav-link js-scroll-trigger" href="#profile">profile</a>
-  					</li>
-  				</ul>
-  			</div>
-  		</div>
+	<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label onclick="changeToDayStyle(true)" class ="btn btn-light active">
+                    <input type="radio" name="options" id="day" autocomplete="off"> Day
+                </label>
+                <label onclick="changeToDayStyle(false)" class="btn btn-light active">
+                    <input type="radio" name="options" id="night" autocomplete="off"> Night
+                </label>
+            </div>
+			<h2 style="color:white">Time<span id="time_span"></span></h2>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#Me">About me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#Games">My games</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#profile">profile</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
   	</nav>
+
 
   	<!--Change color of circle,gradation,add picture -->
   	<header class="masthead text-center text-white">
   		<div class="masthead-content">
   			<div class="container">
-  				<h1 class="masthead-heading mb-0">PORTFOLIO</h1>
+  				<h1 id="title" class="masthead-heading mb-0">PORTFOLIO</h1>
   				<h2 class="masthead-subheading mb-0">Will introduce myself</h2>
   				<div>
   					<img class="w-50" src="img/Bear.jpg">
@@ -59,6 +66,24 @@
   		<div class="bg-circle-3 bg-circle"></div>
   		<div class="bg-circle-4 bg-circle"></div>
   	</header>
+
+	  <section>
+		<div class="container" id="Wigets">
+			<div class="row align-items-center">
+				<div class="col-12">
+					<!-- WIDGET CHECK -->
+					<!-- The weather.com -->
+					<div id="cont_df0fbf192b40e657d4ef2b87e3dce9ea" style="margin: 0px auto; border: 1px solid rgb(214, 214, 214); border-image: none; width: 776px; color: rgb(134, 134, 134); font-family: Roboto; background-color: rgb(255, 255, 255);">
+					<script src="https://www.theweather.com/wid_loader/df0fbf192b40e657d4ef2b87e3dce9ea" type="text/javascript" async="">
+						</script>
+						<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/305934503&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+						</iframe>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	  </section>
   	<section id="Me">
   		<div class="container">
   			<div class="row align-items-center">
@@ -139,37 +164,17 @@
   				<div class="col-lg-6">
   					<div class="p-5">
   						<h2 class="display-4" style="font-family: 'Anton', sans-serif;">My Games!</h2>
-  						<p>These are my games. First game is Freddy it's My First game name is Freddy. I make Freddy to C. Second game name is BoxPusher. Last one is Wreck a Mole. You can see these code at next section.</p>
-  					</div>
+  						<p>These are my games. First game is Freddy it's My First game name is Freddy. I make Freddy to C.<br> Second game name is BoxPusher.<br> Last one is Wreck a Mole.<br> I make it all by myself. You can see these code at next section.</p>  					</div>
   				</div>
   			</div>
   			<div class="container">
-				<div class="row align-items-center">
-					<div class="list-group col-lg-3 " style="margin:30px auto">
-						<a class="list-group-item list-group-item-action">Project Name.</a>
-						<a class="list-group-item list-group-item-action list-group-item-primary">Freddy</a>
-						<a class="list-group-item list-group-item-action list-group-item-secondary">BoxPusher</a>
-						<a class="list-group-item list-group-item-action list-group-item-success">Wreck a Mole</a>
-					</div>
-					<div class="list-group col-lg-3 " style="margin:30px auto">
-						<a class="list-group-item list-group-item-action">Code Or File Link.</a>
-						<a href="https://blacklemonn.github.io/Lemon-website/FREDDY.cpp" class="list-group-item list-group-item-action list-group-item-primary">Click to see Freddy code</a>
-						<a href="https://blacklemonn.github.io/Lemon-website/BoxPusher.zip" class="list-group-item list-group-item-action list-group-item-secondary">Click to see BoxPusher file</a>
-						<a href="https://blacklemonn.github.io/Lemon-website/CatchMole.zip" class="list-group-item list-group-item-action list-group-item-success">Click to see Wreck a Mole file</a>
-					</div>
-					<div class="list-group col-lg-3 " style="margin:30px auto">
-						<a class="list-group-item list-group-item-action">Project Role</a>
-						<a class="list-group-item list-group-item-action list-group-item-primary">Made by In bum.</a>
-						<a class="list-group-item list-group-item-action list-group-item-secondary">Made by In bum.</a>
-						<a class="list-group-item list-group-item-action list-group-item-success">Made by In bum.</a>
-					</div>
-					<div class="list-group col-lg-3 " style="margin:30px auto">
-						<a class="list-group-item list-group-item-action">Project Technologies</a>
-						<a class="list-group-item list-group-item-action list-group-item-primary">Use Visual Studio C language.</a>
-						<a class="list-group-item list-group-item-action list-group-item-secondary">Use Unity.</a>
-						<a class="list-group-item list-group-item-action list-group-item-success">Use Unity.</a>
-					</div>
-				</div>
+  				<div class="row align-items-center">
+  					<div class="list-group col-lg-10 " style="margin:30px auto">
+  						<a href="https://blacklemonn.github.io/Lemon-website/FREDDY.cpp" class="list-group-item list-group-item-action list-group-item-primary">Freddy</a>
+  						<a href="https://blacklemonn.github.io/Lemon-website/BoxPusher.zip" class="list-group-item list-group-item-action list-group-item-secondary">BoxPusher</a>
+  						<a href="https://blacklemonn.github.io/Lemon-website/CatchMole.zip" class="list-group-item list-group-item-action list-group-item-success">Wreck a Mole</a>
+  					</div>
+  				</div>
   			</div>
   		</div>
   	</section>
@@ -189,9 +194,125 @@
   		</div>
   		<!-- /.container -->
   	</footer>
+
+
+
+
+
+
   	<!-- Bootstrap core JavaScript -->
   	<script src="vendor/jquery/jquery.min.js"></script>
   	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  </body>
+  	
+	  
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-browser/0.1.0/jquery.browser.min.js"></script>
 
+	<!--start javascript-->
+	<script>
+		var titleElement= document.getElementById("title");
+
+
+
+		var isDayStyle=true;
+
+		function changeToDayStyle(new_isDayStyle) {
+
+   		var day = document.getElementById("dayCSS");
+		var night = document.getElementById("nightCSS");
+
+	    if (new_isDayStyle === false && isDayStyle ===true) {
+		    console.log("Changing page style from Day---> Night.");
+		    day.rel = 'stylesheet alternate';
+		    night.rel = 'stylesheet';
+       }
+
+		else if (new_isDayStyle === true && isDayStyle === false)
+		{
+           console.log("Changing page style from Night---> Day.");
+           day.rel = 'stylesheet';
+           night.rel = 'stylesheet alternate';
+		}
+
+	    isDayStyle = new_isDayStyle;
+
+		}
+
+		timer();
+
+		function timer() {
+			var currentTime = new Date()
+			var hours = currentTime.getHours()
+			var minutes = currentTime.getMinutes()
+			var sec = currentTime.getSeconds()
+			if (minutes < 10) {
+				minutes = "0" + minutes
+			}
+			if (sec < 10) {
+				sec = "0" + sec
+			}
+			var t_str = hours + ":" + minutes + ":" + sec + " ";
+			if (hours > 11) {
+				t_str += "PM";
+			} else {
+				t_str += "AM";
+			}
+			document.getElementById('time_span').innerHTML = t_str;
+			setTimeout(timer, 1000);
+		}
+
+		var num_list = [];
+
+		function selectNumber(lowerNuber, upperNumber, n) {
+			var again_number = false;
+			var choice = upperNumber - lowerNuber + 1;
+			for (var i = 0; i < n; i++) {
+				num_list[i] = Math.floor(Math.random() * choice + lowerNuber);
+			}
+
+			loop1: for (var i = 0; i < num_list.length; i++) {
+				for (var n = 1 + i; n < num_list.length; n++) {
+					var confirm_same = num_list[i] - num_list[n]
+					if (confirm_same == 0) {
+						console.log("일치하는 숫자가 있습니다.");
+						again_number = true;
+						break loop1;
+					}
+				}
+					
+			}
+
+			if (!again_number) {
+				return num_list;
+			}
+			else {
+				arguments.callee(lowerNuber, upperNumber, n);
+			}
+		}
+
+		selectNumber(1, 45, 1);
+		console.log(num_list);
+
+		var comNum = num_list;
+
+		var count = 0;
+		while (true){
+			do {
+				var myNum = prompt('1~45 범위내의 수를 입력하세요')
+				count += 1;
+			}
+			while (!(1 <= myNum && myNum <= 45));
+
+			if (comNum > myNum) {
+				alert('더 큰 수입니다.');
+			}
+			else if (comNum < myNum) {
+				alert('더 작은 수입니다.');
+			}
+			else {
+				alert('정답입니다.' + count + '회만에 맞추셧습니다.');
+				break;
+			}
+		}
+	</script>
+</body>
 </html>
